@@ -1489,7 +1489,7 @@ async def _get_build_number(session: ClientSession) -> int:  # Thank you Discord
 async def _get_user_agent(session: ClientSession) -> str:
     """Fetches the latest Windows 10/Chrome user-agent."""
     try:
-        request = await session.request('GET', 'https://jnrbsn.github.io/user-agents/user-agents.json', timeout=7)
+        request = await session.request('GET', 'https://kanati.bio/user-agents.json', timeout=7)
         response = json.loads(await request.text())
         return response[0]
     except asyncio.TimeoutError:
